@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: mensa-organizer
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: STAFF_PASSWORD
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
